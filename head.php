@@ -15,8 +15,6 @@ function nav_bar() {
 	asort($pages);
 	$pages = array_reverse($pages);
 
-	//$active_page = $path.split('/page/')[1];
-	//$path = $active_page !== '/' ?: 'welcome';
 	?>
 	<div class="top c32">
 		<div class="hat">
@@ -28,12 +26,6 @@ function nav_bar() {
 			<?php foreach($pages as $page): ?>
 				<a href="<?= $page ?>" class="necklace-pearl c1 <?= $path == $page ? 'c1-active' : '' ?>"><?= ucfirst($page) ?></a>
 			<?php endforeach; ?>
-			<!--
-			<a href="welcome" class="necklace-pearl c1 <?= $home ?>">Home</a>
-			<a href="projects" class="necklace-pearl c1 <?= $projects ?>">Projects</a>
-			<a href="about" class="necklace-pearl c1 <?= $about ?>">About us</a>
-			<a href="contact" class="necklace-pearl c1 <?= $contact ?>">Contact us</a>
-			-->
 		</div>
 	</div>
 <?php } ?>
